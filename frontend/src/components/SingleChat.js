@@ -22,7 +22,7 @@ import Lottie from "react-lottie";
 import animationData from "../animation/typing.json";
 import SendIcon from "@mui/icons-material/Send";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://talkative.onrender.com";
 
 let socket, selectedChatCompare;
 
