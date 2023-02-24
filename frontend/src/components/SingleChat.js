@@ -23,7 +23,8 @@ import animationData from "../animation/typing.json";
 import SendIcon from "@mui/icons-material/Send";
 
 // const ENDPOINT = "https://talkative.onrender.com";
-const ENDPOINT = "http://localhost:5100";
+// const ENDPOINT = "http://localhost:5100";
+const ENDPOINT = "https://talkative.onrender.com";
 
 let socket, selectedChatCompare;
 
