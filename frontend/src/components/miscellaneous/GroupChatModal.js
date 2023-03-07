@@ -45,7 +45,7 @@ const GroupChatModal = ({ children }) => {
 					Authorization: `Bearer ${user.token}`,
 				},
 			};
-			const { data } = await axios.get(`/api/user?search=${search}`, config);
+			const { data } = await axios.get(`https://talkative.onrender.com/api/user?search=${search}`, config);
 			// console.log(data);
 			setLoading(false);
 			setSearchResult(data);
@@ -106,7 +106,7 @@ const GroupChatModal = ({ children }) => {
 				users: JSON.stringify(selectedUsers.map((u) => u._id)),
 			};
 
-			const { data } = await axios.post("/api/chat/group", params, config);
+			const { data } = await axios.post("https://talkative.onrender.com/api/chat/group", params, config);
 
 			setChats([data, ...chats]);
 			onClose(); // closing the model

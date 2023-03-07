@@ -105,7 +105,7 @@ const SignUp = () => {
 					: "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
 			};
 			// const { data } = await axios.post('/api/user', params, config);
-			const { data } = await axios.post("/api/user", params, config);
+			const { data } = await axios.post("https://talkative.onrender.com/api/user", params, config);
 			// console.log(data);
 			toast({
 				title: "Registration Successful",

@@ -69,7 +69,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             };
 
             const { data } = await axios.get(
-                `/api/message/${selectedChat._id}`,
+                `https://talkative.onrender.com/api/message/${selectedChat._id}`,
                 config
             );
             // console.log(data);
@@ -131,7 +131,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 setNewMessage("");
 
                 const { data } = await axios.post(
-                    "/api/message",
+                    "https://talkative.onrender.com/api/message",
                     params,
                     config
                 );

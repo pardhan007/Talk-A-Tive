@@ -51,7 +51,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
 				newChatName: groupChatName,
 			};
 
-			const { data } = await axios.put("/api/chat/rename", params, config);
+			const { data } = await axios.put("https://talkative.onrender.com/api/chat/rename", params, config);
 
 			setSelectedChat(data);
 			setFetchAgain(!fetchAgain);
@@ -83,7 +83,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
 					Authorization: `Bearer ${user.token}`,
 				},
 			};
-			const { data } = await axios.get(`/api/user?search=${search}`, config);
+			const { data } = await axios.get(`https://talkative.onrender.com/api/user?search=${search}`, config);
 			// console.log(data);
 			setLoading(false);
 			setSearchResult(data);
@@ -135,7 +135,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
 				userId: userToAdd._id,
 			};
 
-			const { data } = await axios.put("/api/chat/groupadd", params, config);
+			const { data } = await axios.put("https://talkative.onrender.com/api/chat/groupadd", params, config);
 
 			setSelectedChat(data);
 			setFetchAgain(!fetchAgain);
@@ -181,7 +181,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
 				userId: userToRemove._id,
 			};
 
-			const { data } = await axios.put("/api/chat/groupremove", params, config);
+			const { data } = await axios.put("https://talkative.onrender.com/api/chat/groupremove", params, config);
 
 			userToRemove._id === user._id ? setSelectedChat() : setSelectedChat(data);
 			setFetchAgain(!fetchAgain);
